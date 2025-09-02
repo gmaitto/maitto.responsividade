@@ -1,0 +1,57 @@
+:root{
+    --blue1:#8ecae6;
+    --blue2:#2696ca;
+    --blue3: #023047;
+    --yellow:#ffb703;
+    --orange:#fb8500;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--blue3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.s1{
+    width: 100%;
+    height: auto;
+}
+
+.img-s1{
+    width: 100%;
+}
+
+.title{
+    font-family: "Krona One", sans-serif;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.frase{
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 40px;
+    color: var(--blue1);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.line{
+    background-color: var(--yellow);
+    height: 3px;
+    border: var(--yellow);
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
