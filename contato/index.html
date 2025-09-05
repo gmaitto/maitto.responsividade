@@ -4,8 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato - Betoneiras</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
+    <div class="container">
+        <div class="round">
+           <img src="./images/caminhao-betoneira (2).png" width="60px" height="auto" alt="">
+        </div>
+
+        <div class="wrap-input-label">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" placeholder="Insira seu nome">
+        </div>
+
+        <div class="wrap-input-label">
+            <label for="senha">Mensagem</label>
+            <input type="text" id="senha" placeholder="Insira sua mensagem">
+            <div onclick="showPassword()">
+            </div>
+        </div>
+
+        <button class="btn-login" onclick="login()">Enviar</button>
+    </div>
+    
+    <script src="script.js"></script>
     
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
