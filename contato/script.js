@@ -1,25 +1,24 @@
-function q(){
-    var nome = $('#nome').val()
-    var senha = $('#senha').val()
 
-    if(nome && senha && nome === "admin" && senha === "admin"){
-        const user = {
-            name:nome,
-            dataEntrada: new Date(),
-            id: Math.floor(Math.random() * 100000)
-        };
 
-        localStorage.setItem('usuario', JSON.stringify(user))
-        window.location.href = '..//index.html'
-    }else{
-        document.getElementById('error-modal').style.display = 'flex'
-        document.getElementById('nome').style.borderBottom = '3px solid red'
-        document.getElementById('senha').style.borderBottom = '3px solid red'
+function enviar(){
+    //volta as bordas para preto normalizando o input
+    document.getElementById('nome').style.border = "1px solid black"
+    document.getElementById('assunto').style.border = "1px solid black"
+
+    //atribui para variaveis constantes os valores digitados pelo usuario
+    const nome = document.getElementById('nome').value 
+    const assunto = document.getElementById('assunto').value
+    
+    //condicional para verificar se nao há nome e assunto digitados,
+    //caso nao digitados as bordas do input ficam vermelhas
+    if(!nome || !assunto){
+        document.getElementById('nome').style.border = "2px solid red"
+        document.getElementById('assunto').style.border = "2px solid red"
+        return
     }
-}
 
-function fecharError(){
-        document.getElementById('error-modal').style.display = 'none'
-        document.getElementById('nome').style.borderBottom = '2px solid #090909'
-        document.getElementById('senha').style.borderBottom = '2px solid #090909'
+    //mandando msg por whats
+    const mensagem = `Gostaria de entrar em contato!!! \n\nNome: ${nome} \nMensagem: ${assunto}`
+    const msg = encodeURIComponent(mensagem)
+    window.location.href = `https://wa.me/5541997032216?text=${msg}`
 }
